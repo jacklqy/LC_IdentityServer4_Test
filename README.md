@@ -53,3 +53,11 @@ OIDC(OpenID Connect)--一次请求，可以拿到两个token
 
 OAuth---Access_Token
 OIDC---Id_Token-》只能通过url地址回调，所以只能选择 隐藏式(implicit)或授权码(authorization-code)---》混合式(Hybrid)
+
+
+![image](https://user-images.githubusercontent.com/26539681/116667324-a4501180-a9ce-11eb-9ae7-1a958785efdf.png)
+![image](https://user-images.githubusercontent.com/26539681/116667453-cb0e4800-a9ce-11eb-8cd9-424c8e903456.png)
+![image](https://user-images.githubusercontent.com/26539681/116667805-2dffdf00-a9cf-11eb-85b0-1e88f7eb31af.png)
+
+
+
