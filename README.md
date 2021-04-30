@@ -39,11 +39,6 @@ IdentityServer4是一个中间件，ASP.NET Core 量身定制实现了OpenID Con
  a)JWT Token---常用
  b)Referencce Token中心化---不常用
 
-
-
-GitHub相关说明：https://github.com/IdentityServer/IdentityServer4.Quickstart.UI
-
-
 --------------------------------------------------------
 OAuth2.0负责做授权，它提供的是Access_Token，确定是否有权限，但是它欠缺用户信息。
 OpenID在OAuth2.0的基础上加了Id_Token，登陆之后即给Access_Token又给Id_Token。
@@ -53,6 +48,10 @@ OIDC(OpenID Connect)--一次请求，可以拿到两个token
 
 OAuth---Access_Token
 OIDC---Id_Token-》只能通过url地址回调，所以只能选择 隐藏式(implicit)或授权码(authorization-code)---》混合式(Hybrid)
+
+
+GitHub相关说明：https://github.com/IdentityServer/IdentityServer4.Quickstart.UI  需要安装相应的模板
+![image](https://user-images.githubusercontent.com/26539681/116677864-47a72380-a9db-11eb-87cc-cd7cdf21d235.png)
 
 
 ![image](https://user-images.githubusercontent.com/26539681/116667324-a4501180-a9ce-11eb-9ae7-1a958785efdf.png)
