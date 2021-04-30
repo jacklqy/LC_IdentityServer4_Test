@@ -20,11 +20,18 @@ Token VS 密码
 Oauth，就是Token比密码安全。
 
 OAuth2.0四种授权：
+
  a)客户端凭证(Client credentials)--》授权给一个客户端，不管这个客户端有多少个用户。
+ 
  b)密码式(password)-》密码是客户输入给第三方，需要充分信任第三方，不安全。
+ 
  c)隐藏式(implicit)-》允许授权给浏览器，用户访问A--没有token--A提供跳转B登陆的地址--输入登陆B的账号密码--B授权--跳回A的地址(url带token)--访问A时带上token。-----保护了密码，暴露了token
+ 
  d)授权码(authorization-code)-》允许授权给浏览器，用户访问A--没有token--A提供跳转B登陆的地址--输入登陆B的账号密码--B授权--跳回A的地址(url带code)--A在后台通过code访问B获取token--访问A时带上token。-----保护密码-保护token
+ 
  -e)混合式(Hybrid)-》
+ 
+ -f)自定义模式-》
 
 IdentityServer4是基于RS256私钥公钥模式实现的。
 IdentityServer4是一个中间件，ASP.NET Core 量身定制实现了OpenID Connect和OAuth2.0协议。
