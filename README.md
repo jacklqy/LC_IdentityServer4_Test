@@ -59,6 +59,7 @@ GitHub相关说明：https://github.com/IdentityServer/IdentityServer4.Quickstar
 ![image](https://user-images.githubusercontent.com/26539681/116667805-2dffdf00-a9cf-11eb-85b0-1e88f7eb31af.png)
 ![image](https://user-images.githubusercontent.com/26539681/116675952-feee6b00-a9d8-11eb-802c-3a45c6ddbbd3.png)
 ![image](https://user-images.githubusercontent.com/26539681/116675427-6657eb00-a9d8-11eb-9fda-7b15652a04c7.png)
+![image](https://user-images.githubusercontent.com/26539681/116682523-f13ce380-a9e0-11eb-8bf8-ec8320b1eeb0.png)
 
 
 
