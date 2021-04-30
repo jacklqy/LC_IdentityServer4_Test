@@ -53,7 +53,7 @@ OIDC---Id_Token-》只能通过url地址回调，所以只能选择 隐藏式(im
 GitHub相关说明：https://github.com/IdentityServer/IdentityServer4.Quickstart.UI  需要安装相应的模板
 ![image](https://user-images.githubusercontent.com/26539681/116677864-47a72380-a9db-11eb-87cc-cd7cdf21d235.png)
 
-
+相关流程截图：
 ![image](https://user-images.githubusercontent.com/26539681/116667324-a4501180-a9ce-11eb-9ae7-1a958785efdf.png)
 ![image](https://user-images.githubusercontent.com/26539681/116667453-cb0e4800-a9ce-11eb-8cd9-424c8e903456.png)
 ![image](https://user-images.githubusercontent.com/26539681/116667805-2dffdf00-a9cf-11eb-85b0-1e88f7eb31af.png)
