@@ -21,15 +21,15 @@ Oauth，就是Token比密码安全。
 
 OAuth2.0四种授权：
 
- a)客户端凭证(Client credentials)--》授权给一个客户端，不管这个客户端有多少个用户。
+ a)客户端凭证(Client credentials)--》授权给一个客户端，不管这个客户端有多少个用户。---(测试流程：通过postman工具拿token，然后在测试调用相应的api)
  
- b)密码式(password)-》密码是客户输入给第三方，需要充分信任第三方，不安全。
+ b)密码式(password)-》密码是客户输入给第三方，需要充分信任第三方，不安全。---(测试流程：通过postman工具拿token，然后在测试调用相应的api)
  
- c)隐藏式(implicit)-》允许授权给浏览器，用户访问A--没有token--A提供跳转B登陆的地址--输入登陆B的账号密码--B授权--跳回A的地址(url带token)--访问A时带上token。-----保护了密码，暴露了token
+ c)隐藏式(implicit)-》允许授权给浏览器，用户访问A--没有token--A提供跳转B登陆的地址--输入登陆B的账号密码--B授权--跳回A的地址(url带token)--访问A时带上token。-----保护了密码，暴露了token。(测试流程：先通过http://localhost:7200/connect/authorize?client_id=Zhaoxi.AspNetCore31.AuthDemo&redirect_uri=http://localhost:5726/Ids4/IndexToken&response_type=token&scope=UserApi 输入用户名和密码授权后，获取到了code，然后在通过postman拿着获取的code去获取token，然后在调用相应api)
  
- d)授权码(authorization-code)-》允许授权给浏览器，用户访问A--没有token--A提供跳转B登陆的地址--输入登陆B的账号密码--B授权--跳回A的地址(url带code)--A在后台通过code访问B获取token--访问A时带上token。-----保护密码-保护token
+ d)授权码(authorization-code)-》允许授权给浏览器，用户访问A--没有token--A提供跳转B登陆的地址--输入登陆B的账号密码--B授权--跳回A的地址(url带code)--A在后台通过code访问B获取token--访问A时带上token。-----保护密码-保护token。---(测试流程：先通过http://localhost:7200/connect/authorize?client_id=Zhaoxi.AspNetCore31.AuthDemo&redirect_uri=http://localhost:5726/Ids4/IndexCodeToken&response_type=code&scope=UserApi 输入用户名和密码授权后，获取到了code，然后在通过postman拿着获取的code去获取token，然后在调用相应api)
  
- -e)混合式(Hybrid)-》
+ -e)混合式(Hybrid)-》(测试流程：先通过http://localhost:7200/connect/authorize?client_id=Zhaoxi.AspNetCore31.AuthDemo&redirect_uri=http://localhost:5726/Ids4/IndexCodeToken&response_type=code%20token%20id_token&scope=UserApi%20openid%20CustomIdentityResource&response_model=fragment&nonce=12345 输入用户名和密码授权后，获取到了code，然后在通过postman拿着获取的code去获取token，然后在调用相应api)
  
  -f)自定义模式-》
 
@@ -38,11 +38,6 @@ IdentityServer4是一个中间件，ASP.NET Core 量身定制实现了OpenID Con
 两种Token：
  a)JWT Token---常用
  b)Referencce Token中心化---不常用
-
-
-
-GitHub相关说明：https://github.com/IdentityServer/IdentityServer4.Quickstart.UI
-
 
 --------------------------------------------------------
 OAuth2.0负责做授权，它提供的是Access_Token，确定是否有权限，但是它欠缺用户信息。
@@ -53,3 +48,18 @@ OIDC(OpenID Connect)--一次请求，可以拿到两个token
 
 OAuth---Access_Token
 OIDC---Id_Token-》只能通过url地址回调，所以只能选择 隐藏式(implicit)或授权码(authorization-code)---》混合式(Hybrid)
+
+
+GitHub相关说明：https://github.com/IdentityServer/IdentityServer4.Quickstart.UI  需要安装相应的模板
+![image](https://user-images.githubusercontent.com/26539681/116677864-47a72380-a9db-11eb-87cc-cd7cdf21d235.png)
+
+相关流程截图：
+![image](https://user-images.githubusercontent.com/26539681/116667324-a4501180-a9ce-11eb-9ae7-1a958785efdf.png)
+![image](https://user-images.githubusercontent.com/26539681/116667453-cb0e4800-a9ce-11eb-8cd9-424c8e903456.png)
+![image](https://user-images.githubusercontent.com/26539681/116667805-2dffdf00-a9cf-11eb-85b0-1e88f7eb31af.png)
+![image](https://user-images.githubusercontent.com/26539681/116675952-feee6b00-a9d8-11eb-802c-3a45c6ddbbd3.png)
+![image](https://user-images.githubusercontent.com/26539681/116675427-6657eb00-a9d8-11eb-9fda-7b15652a04c7.png)
+![image](https://user-images.githubusercontent.com/26539681/116682814-509af380-a9e1-11eb-8942-aa58e0ba0405.png)
+
+
+
