@@ -58,6 +58,7 @@ OIDC---Id_Token-》只能通过url地址回调，所以只能选择 隐藏式(im
 ![image](https://user-images.githubusercontent.com/26539681/116667324-a4501180-a9ce-11eb-9ae7-1a958785efdf.png)
 ![image](https://user-images.githubusercontent.com/26539681/116667453-cb0e4800-a9ce-11eb-8cd9-424c8e903456.png)
 ![image](https://user-images.githubusercontent.com/26539681/116667805-2dffdf00-a9cf-11eb-85b0-1e88f7eb31af.png)
+![image](https://user-images.githubusercontent.com/26539681/116675952-feee6b00-a9d8-11eb-802c-3a45c6ddbbd3.png)
 ![image](https://user-images.githubusercontent.com/26539681/116675427-6657eb00-a9d8-11eb-9fda-7b15652a04c7.png)
 
 
