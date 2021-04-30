@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "QnuajDOuj3E/1XoFIqjYMzugsy0HH97zuGQnYFkjNRe8kMCnRfkp7CbduTZR+Pg2POob/nTcg2sMSMW7KIGpjg==",
+  "dgSpecHash": "lggvSmlF43OdX/9nU3PM15OWhh64mSiWfqh0xye1qtwp/WhLzGQvrU0RRiDH2NYrtRL4QFAIrmz5xhRroJqeyQ==",
   "success": true,
-  "projectFilePath": "D:\\Zhaoxi.AspNetCore31.AuthDemo\\Zhaoxi.AspNetCore31.AuthDemo\\Zhaoxi.AspNetCore31.AuthDemo.csproj",
+  "projectFilePath": "D:\\github\\LC_IdentityServer4_Test\\Zhaoxi.AspNetCore31.AuthDemo\\Zhaoxi.AspNetCore31.AuthDemo.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\BRH201\\.nuget\\packages\\atom.base64url\\1.0.2\\atom.base64url.1.0.2.nupkg.sha512",
     "C:\\Users\\BRH201\\.nuget\\packages\\identitymodel\\4.2.0\\identitymodel.4.2.0.nupkg.sha512",

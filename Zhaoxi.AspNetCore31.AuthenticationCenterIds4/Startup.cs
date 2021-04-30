@@ -70,11 +70,11 @@ namespace Zhaoxi.AspNetCore31.AuthenticationCenterIds4
             #endregion
 
             #region Code模式
-            services.AddIdentityServer()
-                .AddDeveloperSigningCredential()//默认的开发者证书 
-               .AddInMemoryApiResources(CodeInitConfig.GetApiResources()) //API访问授权资源
-               .AddInMemoryClients(CodeInitConfig.GetClients())//客户端
-               .AddTestUsers(CodeInitConfig.GetUsers()); //添加用户
+            //services.AddIdentityServer()
+            //    .AddDeveloperSigningCredential()//默认的开发者证书 
+            //   .AddInMemoryApiResources(CodeInitConfig.GetApiResources()) //API访问授权资源
+            //   .AddInMemoryClients(CodeInitConfig.GetClients())//客户端
+            //   .AddTestUsers(CodeInitConfig.GetUsers()); //添加用户
             #endregion
 
             #region Hybrid模式
@@ -87,30 +87,26 @@ namespace Zhaoxi.AspNetCore31.AuthenticationCenterIds4
             #endregion
 
             #region 密码模式+EFCore
-
-            ////通过Migration初始化数据库
-            ////Add-Migration init -Context PersistedGrantDbContext -OutputDir Data/Migrations/IdentityServer/PersistedGrantDb
-            ////Add-Migration init -Context ConfigurationDbContext -OutputDir Data/Migrations/IdentityServer/ConfigurationDb
-
-            ////var connectionString = this.Configuration.GetConnectionString("DefaultConnection");
-            ////services.AddDbContext<ConfigurationDbContext>(opt => opt.UseSqlServer(connectionString
-            ////    , b => b.MigrationsAssembly("Zhaoxi.AspNetCore31.AuthenticationCenterIds4")));
-
-            ////ConfigurationDbContext
-            ////PersistedGrantDbContext
-
-            //////services.AddDbContext<ConfigurationDbContext>(opt => opt.UseSqlServer(connectionString
-            //////    , b => b.MigrationsAssembly("Zhaoxi.AspNetCore31.AuthenticationCenterIds4")));
-
-            //////services.AddDbContext<PersistedGrantDbContext>(opt => opt.UseSqlServer(connectionString
-            //////    , b => b.MigrationsAssembly("Zhaoxi.AspNetCore31.AuthenticationCenterIds4")));
+            //#region 将identityserver4的一些权限配置持久化到数据库(注意此处通过Migration初始化数据库的顺序，不然就要采坑)
+            //////步骤一：先执行下面的
             /////*
+            ////  通过Migration初始化数据库
             ////  add-migration InitialIdentityServerConfigurationDbMigration -c ConfigurationDbContext -o Data/Migrations/IdentityServer/ConfigurationDb 
             ////  add-migration InitialIdentityServerPersistedGrantDbMigration -c PersistedGrantDbContext -o Data/Migrations/IdentityServer/PersistedGrantDb
             //// */
-            //var connectionString = this.Configuration.GetConnectionString("DefaultConnection");
-            //services.InitSeedData(connectionString);//初始原来的那些内存数据
 
+            ////services.AddDbContext<ConfigurationDbContext>(opt => opt.UseSqlServer(connectionString
+            ////    , b => b.MigrationsAssembly("Zhaoxi.AspNetCore31.AuthenticationCenterIds4")));
+
+            ////services.AddDbContext<PersistedGrantDbContext>(opt => opt.UseSqlServer(connectionString
+            ////    , b => b.MigrationsAssembly("Zhaoxi.AspNetCore31.AuthenticationCenterIds4")));
+
+            //////步骤二(必须先单独执行步骤一，然后在单独执行步骤二)：生成Data/Migrations/IdentityServer/ConfigurationDb对应的文件后，在单独调用services.InitSeedData(connectionString)初始化数据库。
+            ////var connectionString = this.Configuration.GetConnectionString("DefaultConnection");
+            ////services.InitSeedData(connectionString);//初始原来的那些内存数据 
+            //#endregion
+
+            //var connectionString = this.Configuration.GetConnectionString("DefaultConnection");
             //services
             //    .AddIdentityServer()
             //    .AddDeveloperSigningCredential()
@@ -130,33 +126,32 @@ namespace Zhaoxi.AspNetCore31.AuthenticationCenterIds4
             //    })
             //   //.AddTestUsers(PasswordInitConfig.GetUsers());
             //   .AddResourceOwnerValidator<CustomResourceOwnerPasswordValidator>()
-            //   .AddProfileService<CustomProfileService>()
-            //;
+            //   .AddProfileService<CustomProfileService>();
             //services.AddTransient<IUserServiceTest, UserServiceTest>();
             #endregion
 
             #region 密码模式+EFCore
-            //var connectionString = this.Configuration.GetConnectionString("DefaultConnection");
-            //services.InitSeedData(connectionString);//初始原来的那些内存数据
-            //services
-            //    .AddIdentityServer()
-            //    .AddDeveloperSigningCredential()
-            //    .AddConfigurationStore(options =>
-            //    {
-            //        options.ConfigureDbContext = builder =>
-            //        {
-            //            builder.UseSqlServer(connectionString);
-            //        };
-            //    })
-            //    .AddOperationalStore(options =>
-            //    {
-            //        options.ConfigureDbContext = builder =>
-            //        {
-            //            builder.UseSqlServer(connectionString);
-            //        };
-            //    })
-            //    .AddExtensionGrantValidator<CustomElevenGrantValidator>();
-            //services.AddTransient<IUserServiceTest, UserServiceTest>();
+            var connectionString = this.Configuration.GetConnectionString("DefaultConnection");
+            services.InitSeedData(connectionString);//初始原来的那些内存数据 
+            services
+                .AddIdentityServer()
+                .AddDeveloperSigningCredential()
+                .AddConfigurationStore(options =>
+                {
+                    options.ConfigureDbContext = builder =>
+                    {
+                        builder.UseSqlServer(connectionString);
+                    };
+                })
+                .AddOperationalStore(options =>
+                {
+                    options.ConfigureDbContext = builder =>
+                    {
+                        builder.UseSqlServer(connectionString);
+                    };
+                })
+                .AddExtensionGrantValidator<CustomElevenGrantValidator>();
+            services.AddTransient<IUserServiceTest, UserServiceTest>();
             #endregion
         }
 

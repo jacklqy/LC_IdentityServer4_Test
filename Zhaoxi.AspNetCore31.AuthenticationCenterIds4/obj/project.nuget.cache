@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "KrpC2ZlYrhCBrpokKHO/D7m8zIhZwfdldyfw48Fl4JXrodCKS93wLsfqvEyoYmnny4XJJiXL5lzhCkxdEQ71UA==",
+  "dgSpecHash": "9+k0+tbWjcS5IWRWfOLqvuOYbLAcZ0HyTguLCxfKXp5Au0B6To1AjG0CwYhxCrQAUMvxfB2MjjNpo/4XbJs+sw==",
   "success": true,
-  "projectFilePath": "D:\\Zhaoxi.AspNetCore31.AuthDemo\\Zhaoxi.AspNetCore31.AuthenticationCenterIds4\\Zhaoxi.AspNetCore31.AuthenticationCenterIds4.csproj",
+  "projectFilePath": "D:\\github\\LC_IdentityServer4_Test\\Zhaoxi.AspNetCore31.AuthenticationCenterIds4\\Zhaoxi.AspNetCore31.AuthenticationCenterIds4.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\BRH201\\.nuget\\packages\\automapper\\9.0.0\\automapper.9.0.0.nupkg.sha512",
     "C:\\Users\\BRH201\\.nuget\\packages\\identitymodel\\4.1.1\\identitymodel.4.1.1.nupkg.sha512",

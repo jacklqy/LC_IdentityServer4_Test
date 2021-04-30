@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Zhaoxi.AspNetCore31.AuthDemo\\Zhaoxi.AspNetCore31.AuthenticationCenterIds4\\Zhaoxi.AspNetCore31.AuthenticationCenterIds4.csproj": {}
+    "D:\\github\\LC_IdentityServer4_Test\\Zhaoxi.AspNetCore31.AuthenticationCenterIds4\\Zhaoxi.AspNetCore31.AuthenticationCenterIds4.csproj": {}
   },
   "projects": {
-    "D:\\Zhaoxi.AspNetCore31.AuthDemo\\Zhaoxi.AspNetCore31.AuthenticationCenterIds4\\Zhaoxi.AspNetCore31.AuthenticationCenterIds4.csproj": {
+    "D:\\github\\LC_IdentityServer4_Test\\Zhaoxi.AspNetCore31.AuthenticationCenterIds4\\Zhaoxi.AspNetCore31.AuthenticationCenterIds4.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Zhaoxi.AspNetCore31.AuthDemo\\Zhaoxi.AspNetCore31.AuthenticationCenterIds4\\Zhaoxi.AspNetCore31.AuthenticationCenterIds4.csproj",
+        "projectUniqueName": "D:\\github\\LC_IdentityServer4_Test\\Zhaoxi.AspNetCore31.AuthenticationCenterIds4\\Zhaoxi.AspNetCore31.AuthenticationCenterIds4.csproj",
         "projectName": "Zhaoxi.AspNetCore31.AuthenticationCenterIds4",
-        "projectPath": "D:\\Zhaoxi.AspNetCore31.AuthDemo\\Zhaoxi.AspNetCore31.AuthenticationCenterIds4\\Zhaoxi.AspNetCore31.AuthenticationCenterIds4.csproj",
+        "projectPath": "D:\\github\\LC_IdentityServer4_Test\\Zhaoxi.AspNetCore31.AuthenticationCenterIds4\\Zhaoxi.AspNetCore31.AuthenticationCenterIds4.csproj",
         "packagesPath": "C:\\Users\\BRH201\\.nuget\\packages\\",
-        "outputPath": "D:\\Zhaoxi.AspNetCore31.AuthDemo\\Zhaoxi.AspNetCore31.AuthenticationCenterIds4\\obj\\",
+        "outputPath": "D:\\github\\LC_IdentityServer4_Test\\Zhaoxi.AspNetCore31.AuthenticationCenterIds4\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\BRH201\\AppData\\Roaming\\NuGet\\NuGet.Config",

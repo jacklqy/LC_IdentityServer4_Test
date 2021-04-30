@@ -9,11 +9,11 @@ using Zhaoxi.AspNetCore31.AuthenticationCenterIds4.DataInit.DB;
 namespace Zhaoxi.AspNetCore31.AuthenticationCenterIds4.Utility
 {
     /// <summary>
-    /// 扩展-类型-校验器
+    /// 扩展-类型-校验器---》自定定义校验规则
     /// </summary>
     public class CustomElevenGrantValidator : IExtensionGrantValidator
     {
-        public string GrantType => "CustomEleven";
+        public string GrantType => "CustomEleven";//这个里添加了数据库表ClientGrantTypes也必须的添加。
 
         private readonly IUserServiceTest _iUserServiceTest;
 
