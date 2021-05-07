@@ -281,4 +281,3 @@ D:\github\LC_IdentityServer4_Test\Zhaoxi.AspNetCore31.AuthenticationCenterIds4\o
 D:\github\LC_IdentityServer4_Test\Zhaoxi.AspNetCore31.AuthenticationCenterIds4\obj\Debug\netcoreapp3.1\Zhaoxi.AspNetCore31.AuthenticationCenterIds4.dll
 D:\github\LC_IdentityServer4_Test\Zhaoxi.AspNetCore31.AuthenticationCenterIds4\obj\Debug\netcoreapp3.1\Zhaoxi.AspNetCore31.AuthenticationCenterIds4.pdb
 D:\github\LC_IdentityServer4_Test\Zhaoxi.AspNetCore31.AuthenticationCenterIds4\obj\Debug\netcoreapp3.1\Zhaoxi.AspNetCore31.AuthenticationCenterIds4.genruntimeconfig.cache
-D:\github\LC_IdentityServer4_Test\Zhaoxi.AspNetCore31.AuthenticationCenterIds4\obj\Debug\netcoreapp3.1\Zhaoxi.AspNetCore31.AuthenticationCenterIds4.csprojAssemblyReference.cache

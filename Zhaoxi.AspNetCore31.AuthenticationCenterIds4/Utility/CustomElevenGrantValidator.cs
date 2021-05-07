@@ -32,7 +32,7 @@ namespace Zhaoxi.AspNetCore31.AuthenticationCenterIds4.Utility
             {
                 context.Result = new GrantValidationResult(TokenRequestErrors.InvalidGrant);
             }
-            var result = this._iUserServiceTest.Login(CE_name, CE_password);
+            var result = this._iUserServiceTest.Login(CE_name, CE_password);//模拟数据库校验
             if (result == null)
             {
                 context.Result = new GrantValidationResult(TokenRequestErrors.InvalidGrant);

@@ -44,7 +44,7 @@ namespace Zhaoxi.AspNetCore31.AuthDemo
             services.AddControllersWithViews()//反射收集dll-控制器--action--PartManager
                 .AddNewtonsoftJson();
 
-            //services.AddAuthorization()
+            //services.AddAuthorization();
             //services.AddAuthorizationCore();
             //services.AddAuthorizationPolicyEvaluator();
 
@@ -292,6 +292,7 @@ namespace Zhaoxi.AspNetCore31.AuthDemo
             #endregion
 
             #region IdentityServer4--Password
+            //鉴权
             services.AddAuthentication("Bearer")
                 .AddIdentityServerAuthentication(options =>
                 {
@@ -299,6 +300,7 @@ namespace Zhaoxi.AspNetCore31.AuthDemo
                     options.ApiName = "TestApi";
                     options.RequireHttpsMetadata = false;
                 });
+            //授权
             services.AddAuthorization(options =>
             {
                 options.AddPolicy("eMailPolicy",

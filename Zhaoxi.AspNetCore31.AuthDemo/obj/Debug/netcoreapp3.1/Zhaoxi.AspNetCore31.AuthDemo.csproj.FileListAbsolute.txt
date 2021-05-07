@@ -953,7 +953,6 @@ D:\github\LC_IdentityServer4_Test\Zhaoxi.AspNetCore31.AuthDemo\bin\Debug\netcore
 D:\github\LC_IdentityServer4_Test\Zhaoxi.AspNetCore31.AuthDemo\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 D:\github\LC_IdentityServer4_Test\Zhaoxi.AspNetCore31.AuthDemo\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 D:\github\LC_IdentityServer4_Test\Zhaoxi.AspNetCore31.AuthDemo\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\github\LC_IdentityServer4_Test\Zhaoxi.AspNetCore31.AuthDemo\obj\Debug\netcoreapp3.1\Zhaoxi.AspNetCore31.AuthDemo.csprojAssemblyReference.cache
 D:\github\LC_IdentityServer4_Test\Zhaoxi.AspNetCore31.AuthDemo\obj\Debug\netcoreapp3.1\Zhaoxi.AspNetCore31.AuthDemo.AssemblyInfoInputs.cache
 D:\github\LC_IdentityServer4_Test\Zhaoxi.AspNetCore31.AuthDemo\obj\Debug\netcoreapp3.1\Zhaoxi.AspNetCore31.AuthDemo.AssemblyInfo.cs
 D:\github\LC_IdentityServer4_Test\Zhaoxi.AspNetCore31.AuthDemo\obj\Debug\netcoreapp3.1\Zhaoxi.AspNetCore31.AuthDemo.csproj.CoreCompileInputs.cache

@@ -132,7 +132,7 @@ namespace Zhaoxi.AspNetCore31.AuthenticationCenterIds4
 
             #region 密码模式+EFCore
             var connectionString = this.Configuration.GetConnectionString("DefaultConnection");
-            services.InitSeedData(connectionString);//初始原来的那些内存数据 
+            //services.InitSeedData(connectionString);//初始原来的那些内存数据 
             services
                 .AddIdentityServer()
                 .AddDeveloperSigningCredential()
